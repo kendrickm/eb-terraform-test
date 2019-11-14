@@ -21,6 +21,6 @@ resource "aws_elastic_beanstalk_environment" "eb-demo" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name = "IamInstanceProfile"
-    value = "arn:aws:iam::609831459651:instance-profile/aws-elasticbeanstalk-ec2-role"
+    value = "aws-elasticbeanstalk-ec2-role"
   }
 }
