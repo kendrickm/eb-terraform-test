@@ -5,3 +5,4 @@
 !.elasticbeanstalk/*.global.yml
 .terraform
 *.tfstate.backup
+app/node_modules/
