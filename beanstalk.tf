@@ -2,7 +2,6 @@ variable "aws_region" {
   default = "us-east-2"
 }
 
-
 provider "aws" {
   profile = "personal"
   region  = "${var.aws_region}"
@@ -23,4 +22,9 @@ resource "aws_elastic_beanstalk_environment" "eb-demo" {
     name = "IamInstanceProfile"
     value = "aws-elasticbeanstalk-ec2-role"
   }
+  setting {
+   namespace = "aws:elasticbeanstalk:cloudwatch:logs"
+   name      = "StreamLogs"
+   value     = "true"
+ }
 }
